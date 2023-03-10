@@ -1,0 +1,66 @@
+
+/////extraLargeArray/////
+
+
+doublerAppend 3.552746 ms
+
+doublerInsert 938.339964 ms
+
+
+
+
+
+////////largeArray///////
+
+
+
+doublerAppend 899.274 μs
+
+doublerInsert 8.498159 ms
+
+
+
+
+
+
+
+///////mediumArray///////
+
+
+
+doublerAppend 221.651 μs
+
+doublerInsert 158.782 μs
+
+
+
+
+///////smallArray////////
+
+
+
+doublerAppend 176.05 μs
+
+doublerInsert 49.027 μs
+
+
+
+
+///////tinyArray////////
+
+
+doublerAppend 102.305 μs
+
+doublerInsert 38.982 μs
+
+
+
+When comparing the functions doublerAppend and doublerInsert I found that
+using diffrent sized arrays will yeild different ratios of run speed. 
+When using arrays the size of 10000 and 100000 I found that it is far
+more advantageous to use the doublerAppend function in terms of run time.
+When using arrays the size of 1000 and below I found that these function have 
+a run time that is nearly the same however it is marginally quicker to use doublerInsert.
+The issue with doublerInsert is that it doesn't scale very well in the event of needing to
+use this function in a real world secenario it my be worth while to look at the 
+runtime and try to find alternative solutions to that same function.
